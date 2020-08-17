@@ -18,7 +18,8 @@
             <h2>صفحه ورود</h2>
         </div>
         
-        <form action="registeration-page.php" method="POST">
+        <form action="login.php" method="POST">
+
             <div>
 
                 <label for="username">نام کاربری:</label>
@@ -28,7 +29,7 @@
              <div>
 
                 <label for="password">رمز عبور:</label>
-                <input type="password" name="password_3" required>
+                <input type="password" name="password" required>
 
             </div>                      
 

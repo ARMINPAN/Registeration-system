@@ -3,14 +3,14 @@
 session_start();
 
 if(isset($_SESSION['username'])){
-    $_SESSION['msg'] = "you must log in first,to view this page.";
-    header('location: login.php');
+    echo $_SESSION['msg'] = "you must log in first,to view this page.";
+    header("location: login.php");
 }
 
 if(isset($_GET['logout'])){
     session_destroy();
     unset($_SESSION['username']);
-    header('location: login.php');
+    header("location: login.php");
 }
 ?>
 
@@ -25,6 +25,7 @@ if(isset($_GET['logout'])){
 </head>
 
 <body>
+
     <h1>Personal page</h1>
     <?php
     if(isset($_SESSION['success'])) : ?>

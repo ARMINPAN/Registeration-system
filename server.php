@@ -19,6 +19,7 @@ $phonenumber = "";
 $data_b = mysqli_connect('localhost','root','','krbbh-login-system') or die("could not connect to Database");
 
 //////registering
+
 $username = mysqli_real_escape_string($data_b, $_POST['username']);
 $email = mysqli_real_escape_string($data_b, $_POST['email']);
 $password_0 = mysqli_real_escape_string($data_b, $_POST['password_0']);
@@ -74,7 +75,7 @@ if(count($errors) == 0){
 
 if(isset($_POST['login-user'])){
     $username = mysqli_real_escape_string($data_b, $_POST['username']);
-    $password = mysqli_real_escape_string($data_b, $_POST['password_3']);
+    $password = mysqli_real_escape_string($data_b, $_POST['password']);
 
 if(empty($username)){
     array_push($errors,"username is required");

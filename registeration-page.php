@@ -1,4 +1,5 @@
-<?php  include("server.php") ?>
+<?php  include('server.php') ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -15,12 +16,9 @@
         <div class="header">
             <h2>فرم ثبت‌نام رویداد</h2>
         </div>
-
+ 
         <form action="registeration-page.php" method="POST">
-                    <?php 
-                        include('error.php')
-                    ?>
-                
+        <?php  include('error.php') ?>
             <div>
 
                 <label for="username">نام کاربری:</label>
@@ -74,6 +72,8 @@
             </div>  
             <button type="submit" name="register-user">ثبت‌نام</button>
             <p>قبلا ثبت‌نام کرده‌اید؟ <a href="login.php"><b>وارد شوید</b></a></p>
+
+                
         </form>
     </div>
 </body>
