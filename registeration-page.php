@@ -1,6 +1,4 @@
-<?php 
-    include('server.php')
-?>
+<?php  include("server.php") ?>
 
 <!DOCTYPE html>
 <html>
@@ -19,6 +17,10 @@
         </div>
 
         <form action="registeration-page.php" method="POST">
+                    <?php 
+                        include('error.php')
+                    ?>
+                
             <div>
 
                 <label for="username">نام کاربری:</label>
@@ -34,13 +36,13 @@
              <div>
 
                 <label for="password">رمز عبور:</label>
-                <input type="password" name="password__0" required>
+                <input type="password" name="password_0" required>
 
             </div>                      
              <div>
 
                 <label for="password">تکرار رمز عبور:</label>
-                <input type="password" name="password__1" required>
+                <input type="password" name="password_1" required>
 
             </div> 
              <div>
@@ -61,6 +63,13 @@
 
                 <label for="lname">نام خانوادگی:</label>
                 <input type="text" name="lname" required>
+
+            </div>  
+
+            <div>
+
+                <label for="phonenumber">شماره تماس:</label>
+                <input type="text" name="phonenumber" required>
 
             </div>  
             <button type="submit" name="register-user">ثبت‌نام</button>

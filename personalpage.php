@@ -4,13 +4,13 @@ session_start();
 
 if(isset($_SESSION['username'])){
     $_SESSION['msg'] = "you must log in first,to view this page.";
-    header("location: login.php");
+    header('location: login.php');
 }
 
 if(isset($_GET['logout'])){
     session_destroy();
     unset($_SESSION['username']);
-    header("location: login.php");
+    header('location: login.php');
 }
 ?>
 
@@ -50,7 +50,7 @@ if(isset($_GET['logout'])){
         </strong>
     </h3>
 
-    <button type="submit" name="logout"><a href="personalpage.php?logout ='1'"></a></button>
+    <button><a href="personalpage.php?logout ='1'"></a></button>
 
     <?php endif ?>
 

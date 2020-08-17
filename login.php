@@ -28,7 +28,7 @@
              <div>
 
                 <label for="password">رمز عبور:</label>
-                <input type="password" name="password__0" required>
+                <input type="password" name="password_3" required>
 
             </div>                      
 
