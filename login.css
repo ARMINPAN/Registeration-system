@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'FS Albert Arabic Web Regular' , 'B nazanin';
+}
+
+
+.container{
+    direction: rtl;
+    text-align: right;
+}
+.header{
+    
+}
