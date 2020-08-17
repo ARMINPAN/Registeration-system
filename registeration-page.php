@@ -18,6 +18,8 @@
         </div>
  
         <form action="registeration-page.php" method="POST">
+        <input type="hidden" name="submited" value="true" />
+
         <?php  include('error.php') ?>
             <div>
 

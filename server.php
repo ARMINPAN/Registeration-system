@@ -19,15 +19,17 @@ $phonenumber = "";
 $data_b = mysqli_connect('localhost','root','','krbbh-login-system') or die("could not connect to Database");
 
 //////registering
+if(isset($_REQUEST['submited'])){
+    $username = mysqli_real_escape_string($data_b, $_POST['username']);
+    $email = mysqli_real_escape_string($data_b, $_POST['email']);
+    $password_0 = mysqli_real_escape_string($data_b, $_POST['password_0']);
+    $password_1 = mysqli_real_escape_string($data_b, $_POST['password_1']);
+    $school = mysqli_real_escape_string($data_b, $_POST['school']);
+    $fname = mysqli_real_escape_string($data_b, $_POST['fname']);
+    $lname = mysqli_real_escape_string($data_b, $_POST['lname']);
+    $phonenumber = mysqli_real_escape_string($data_b, $_POST['phonenumber']);
+}
 
-$username = mysqli_real_escape_string($data_b, $_POST['username']);
-$email = mysqli_real_escape_string($data_b, $_POST['email']);
-$password_0 = mysqli_real_escape_string($data_b, $_POST['password_0']);
-$password_1 = mysqli_real_escape_string($data_b, $_POST['password_1']);
-$school = mysqli_real_escape_string($data_b, $_POST['school']);
-$fname = mysqli_real_escape_string($data_b, $_POST['fname']);
-$lname = mysqli_real_escape_string($data_b, $_POST['lname']);
-$phonenumber = mysqli_real_escape_string($data_b, $_POST['phonenumber']);
 
 //////////check the boxes not to be empty
 
