@@ -1,3 +1,4 @@
+<?php  include('server.php') ?>
 
 
 <!DOCTYPE html>
@@ -16,8 +17,12 @@
             <h2>صفحه ورود</h2>
         </div>
         
-        <form action="login.php" method="POST">
+        <form action="login.php" method="POST" name="loged">
+        <?php
+    if(isset($_REQUEST['loged'])):?>
 
+        <?php  include('errors.php') ?>
+        <?php endif ?>
             <div>
 
                 <label for="username">نام کاربری:</label>

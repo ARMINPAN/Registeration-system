@@ -19,8 +19,11 @@
  
         <form action="registeration-page.php" method="POST">
         <input type="hidden" name="submited" value="true" />
+        <?php
+    if(isset($_REQUEST['submited'])):?>
 
-        <?php  include('error.php') ?>
+        <?php  include('errors.php') ?>
+        <?php endif ?>
             <div>
 
                 <label for="username">نام کاربری:</label>

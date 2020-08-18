@@ -1,14 +1,13 @@
+
 <?php
 
 session_start();
 
-if(isset($_SESSION['username'])){
+if(!isset($_SESSION['username'])){
     echo $_SESSION['msg'] = "you must log in first,to view this page.";
-    header("location: login.php");
+    header('location: login.php');
 }
-
 if(isset($_GET['logout'])){
-    session_destroy();
     unset($_SESSION['username']);
     header("location: login.php");
 }
@@ -17,7 +16,7 @@ if(isset($_GET['logout'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>صفحه شخصی رویداد/title>
+    <title>صفحه شخصی رویداد</title>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="./login.css">
@@ -28,9 +27,9 @@ if(isset($_GET['logout'])){
 
     <h1>Personal page</h1>
     <?php
-    if(isset($_SESSION['success'])) : ?>
+    if(isset($_SESSION['success'])):?>
 
-    <div>
+    <div class="error success">
         <h3>
             <?php
                 echo $_SESSION['success'];
@@ -38,10 +37,10 @@ if(isset($_GET['logout'])){
             ?>
         </h3>
     </div>
-<?php endif ?>
+<?php endif?>
 
 <!-- //////////user infos -->
-<?php if(isset($_SESSION['username'])) : ?>
+<?php if(isset($_SESSION['username'])):?>
     <h3>
         welcome
         <strong>
@@ -51,9 +50,9 @@ if(isset($_GET['logout'])){
         </strong>
     </h3>
 
-    <button><a href="personalpage.php?logout ='1'"></a></button>
+    <button><a href="personalpage.php?logout=1">logout</a></button>
 
-    <?php endif ?>
+    <?php endif?>
 
 </body>
 </html>
