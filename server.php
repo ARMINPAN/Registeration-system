@@ -6,6 +6,7 @@ session_start();
 /////////vars
 $username = "";
 $email = "";
+$password = "";
 $password_0 = "";
 $password_1 = "";
 $school = "";
@@ -15,9 +16,10 @@ $phonenumber = "";
 
 
 ///////connecting
+$errors = array();
 
 $data_b = mysqli_connect('localhost','root','','krbbh-login-system') or die("could not connect to Database");
-
+if(isset($_POST['register-user'])){
 //////registering
 if(isset($_REQUEST['submited'])){
     $username = mysqli_real_escape_string($data_b, $_POST['username']);
@@ -35,7 +37,7 @@ if(isset($_REQUEST['submited'])){
 
 
 /////////errors
-$errors = array();
+
 
 if(empty($username)) {array_push($errors, "Username is required");}
 if(empty($email)) {array_push($errors, "Email is required");}
@@ -71,36 +73,50 @@ if(count($errors) == 0){
     
     
 }
+}
 //////////////////////////registering finished
 
 
 /////////////////////////loging in
 
 if(isset($_POST['login-user'])){
-    $usernamee = mysqli_real_escape_string($data_b, $_POST['username']);
-    $passwordd = mysqli_real_escape_string($data_b, $_POST['password']);
-
-if(empty($usernamee)){
-    array_push($errors,"username is required");
-}
-
-if(empty($passwordd)){
-    array_push($errors,"password is required");
+    $errors = [];
+    $username = mysqli_real_escape_string($data_b, $_POST['username']);
+    $password = mysqli_real_escape_string($data_b, $_POST['password']);
+    // echo count($errors);
+if(isset($_REQUEST['loged'])){
+    if(empty($username)){
+        array_push($errors,"username is required");
+    }
+    
+    if(empty($password)){
+        array_push($errors,"password is required");
+    }
 }
 
 if(count($errors) == 0){
     $password = md5($password);
     $query = "SELECT * FROM user WHERE username = '$username' AND password ='$password' ";
     $results = mysqli_query($data_b,$query);
+    
     if(mysqli_num_rows($results)){
-        $_SESSION['username'] = $usernamee;
-        $_SESSION['success'] = "You`re logged in now";
-        header('location : personalpage.php');
-    }
+        $user = mysqli_fetch_assoc($results);
+        echo 'alert(message successfully sent)';
+        if($user['username'] === $username and $user['password'] === $password){
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = "You`re logged in now";
+            // header('location : personalpage.php');
+            echo 'alert(message successfully sent)';
+        }
 
+    }
     else{
         array_push($errors,"username and password doesn`t match,please try again.");
+        foreach($errors as $error){
+            echo $error;
+        }
     }
+
 }
 
 }
