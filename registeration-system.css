@@ -8,11 +8,11 @@ body{
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    font-family: 'FS Albert Arabic Web Regular' , 'B nazanin';
+    font-family: 'FS Albert Arabic Web Regular' ;
 }
 
 
 .container{
-    direction: rtl;
-    text-align: right;
+    direction: ltr;
+    text-align: left;
 }

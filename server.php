@@ -101,12 +101,10 @@ if(count($errors) == 0){
     
     if(mysqli_num_rows($results)){
         $user = mysqli_fetch_assoc($results);
-        echo 'alert(message successfully sent)';
         if($user['username'] === $username and $user['password'] === $password){
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You`re logged in now";
-            // header('location : personalpage.php');
-            echo 'alert(message successfully sent)';
+            header('location : personalpage.php');
         }
 
     }
