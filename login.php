@@ -1,4 +1,4 @@
-<?php  include('server.php') ?>
+
 
 
 <!DOCTYPE html>
@@ -12,6 +12,8 @@
 </head>
 
 <body style="font-family: FS Albert Arabic Web Regular;">
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 
     <div class="container">
@@ -20,11 +22,6 @@
         </div>
         
         <form action="login.php" method="POST" name="loged">
-        <?php
-    if(isset($_REQUEST['loged'])):?>
-
-        <?php  include('errors.php') ?>
-        <?php endif ?>
             <div>
                 <input type="text" name="username" placeholder="Username" required>
             </div>   
@@ -33,11 +30,15 @@
                 <input type="password" name="password"  placeholder="Password" required>
             </div>                      
 
-            
             <button type="submit" name="login-user">Sign-in</button>
             <p><a href="registeration-page.php"><b>Not a member yet?! Sign-up</b></a></p>
+
         </form>
+        <div class="error">
+    <?php  include('server.php') ?>
+        </div>
     </div>
+
 </body>
 
 </html>

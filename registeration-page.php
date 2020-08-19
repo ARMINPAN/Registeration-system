@@ -25,11 +25,8 @@
  
         <form action="registeration-page.php" method="POST">
         <input type="hidden" name="submited" placeholder="true" />
-        <?php
-    if(isset($_REQUEST['submited'])):?>
 
-        <?php  include('errors.php') ?>
-        <?php endif ?>
+   
             <div>
                 <input type="text" name="username" placeholder="Username" required>
             </div>
@@ -63,9 +60,14 @@
             </div>  
             <button type="submit" name="register-user">Sign-up</button>
             <p><a href="login.php"><b> Already a member? Sign-in</b></a></p>
-
-                
         </form>
+        <div class="error">
+        <?php
+    if(isset($_REQUEST['submited'])):?>
+
+        <?php  include('errors.php') ?>
+        <?php endif ?>
+        </div>
     </div>
 </body>
 
