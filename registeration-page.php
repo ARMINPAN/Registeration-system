@@ -8,74 +8,61 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="logo.png">
+        <link rel="stylesheet" type="text/css" href="./registeration-systemm.css">
 </head>
 
 <body style="font-family: FS Albert Arabic Web Regular;">
+<!-- <img class="imge" src="register-back.jpg"> -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+
     <div class="container">
         <div class="header">
-            <h2>Sign-up form</h2>
+            <h1>Sign-up form</h1>
         </div>
  
         <form action="registeration-page.php" method="POST">
-        <input type="hidden" name="submited" value="true" />
+        <input type="hidden" name="submited" placeholder="true" />
         <?php
     if(isset($_REQUEST['submited'])):?>
 
         <?php  include('errors.php') ?>
         <?php endif ?>
             <div>
-
-                <label for="username">Username:</label>
-                <input type="text" name="username" required>
-
+                <input type="text" name="username" placeholder="Username" required>
             </div>
+
              <div>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>  
 
-                <label for="email">Email:</label>
-                <input type="email" name="email" required>
-
-            </div>      
              <div>
-
-                <label for="password">Password:</label>
-                <input type="password" name="password_0" required>
-
-            </div>                      
-             <div>
-
-                <label for="password">Retype password:</label>
-                <input type="password" name="password_1" required>
-
+                <input type="password" name="password_0" placeholder="Password" required>
             </div> 
+
              <div>
+                <input type="password" name="password_1" placeholder="Retype Password" required>
+            </div> 
 
-                <label for="school">School:</label>
-                <input type="text" name="school" required>
-
+             <div>
+                <input type="text" name="school" placeholder="School-Name" required>
             </div> 
 
             <div>
-
-                <label for="fname">First-Name:</label>
-                <input type="text" name="fname" required>
-
+                <input type="text" name="fname"  placeholder="First-Name" required>
             </div>  
 
             <div>
-
-                <label for="lname">Last-Name:</label>
-                <input type="text" name="lname" required>
-
+                <input type="text" name="lname" placeholder="Last-Name" required>
             </div>  
 
             <div>
-
-                <label for="phonenumber">Phone-number:</label>
-                <input type="text" name="phonenumber" required>
-
+                <input type="text" name="phonenumber" placeholder="Phone-number" required>
             </div>  
             <button type="submit" name="register-user">Sign-up</button>
-            <p>Already a member? <a href="login.php"><b>Sign-in</b></a></p>
+            <p><a href="login.php"><b> Already a member? Sign-in</b></a></p>
 
                 
         </form>

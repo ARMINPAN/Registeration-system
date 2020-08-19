@@ -19,7 +19,6 @@ a:link {
     transition: 0.5s;
     color: rgb(53, 53, 53);
     background-color: transparent;
-    text-decoration: underline;
   }
   
   a:active {
@@ -27,7 +26,15 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
+
 body{
+    position: relative;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    text-align: center;
     font-size: 18px;
     box-sizing: border-box;
     font-family: 'FS Albert Arabic Web Regular' ;
@@ -36,63 +43,10 @@ body{
 	animation: gradient 15s ease infinite;
 }
 
-.imge{
-  filter: blur(4px);
-  width:100%;
-
-}
-::placeholder {
-    color: rgb(170, 170, 170);
-    font-family: 'FS Albert Arabic Web Regular';
-    font-size: 15px;
-  }
-
-.container{
-    display: flex;
-    flex-direction: column;
-    margin: auto auto auto auto;
-    width: 500px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.938);
-    text-align: center;
-    color: white;
-    padding-top: 70px;
-    padding-bottom: 70px;
-
-}
-.container form div{
-    margin: auto auto auto auto;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: center;
-    padding-top: 15px;
-}
-.container form div input{
-    margin: auto auto auto auto;
-   width: 50%;
-   justify-content: center;
-   text-align: center;
-   height: 40px;
-   background: none;
-   border: none;
-   border-bottom: 2px solid rgb(56, 52, 52);
-   outline: none;
-   color: white;
-}
-
-.container form div input:focus {
-    transition: 0.3s;
-    border: none;
-    border-bottom: 2px solid rgb(172, 163, 163);
-    color: white;
-    width: 55%;
-}
-
 .header{
     font-weight: bolder;
 }
-.container button{
+button{
     cursor: pointer;
     margin-top: 10%;
     margin-bottom: 15px;
@@ -103,7 +57,7 @@ body{
     font-size: 18px;
     border-radius: 22px;
 }
-.container button:hover{
+button:hover{
     transition: 0.5s;
     cursor: pointer;
     margin-top: 10%;

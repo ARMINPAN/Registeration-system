@@ -19,7 +19,7 @@ if(isset($_GET['logout'])){
     <title>صفحه شخصی رویداد</title>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="./login.css">
+        <link rel="stylesheet" type="text/css" href="./personalpage.css">
         <link rel="icon" type="image/png" href="logo.png">
 </head>
 
@@ -41,7 +41,7 @@ if(isset($_GET['logout'])){
 
 <!-- //////////user infos -->
 <?php if(isset($_SESSION['username'])):?>
-    <h3>
+    <h3 class="texts">
         welcome
         <strong>
         <?php
