@@ -10,3 +10,6 @@ You can change the inputs easily by just copying the input texts in Registeratio
 
 Good luck.
 THANKS!
+
+
+-----------I added the styles to the file. now, both free style and the file with the style is available.
