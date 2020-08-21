@@ -12,4 +12,4 @@ Good luck.
 THANKS!
 
 
------------I added the styles to the file. now, both free style and the file with the style is available.
+-----------I added style to the file. now, both free style and the file with the style is available.
